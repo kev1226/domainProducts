@@ -3,7 +3,7 @@ import { ProductsModule } from './products/products.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [ProductsModule,
+  imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -13,8 +13,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: 'products_db',
       autoLoadEntities: true,
       synchronize: true,
-    })
+    }),  
+    ProductsModule
   ],
+
   controllers: [],
   providers: [],
 })

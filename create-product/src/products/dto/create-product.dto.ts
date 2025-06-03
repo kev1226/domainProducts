@@ -10,8 +10,7 @@ export class CreateProductDto {
     @IsPositive()
     price: number;
     
-    @IsString()
-    @MinLength(1)
-    @IsOptional()
-    category?: string;
+    @IsNumber()
+    @IsPositive()
+    category_id: number;
 }

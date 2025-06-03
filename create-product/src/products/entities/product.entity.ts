@@ -13,7 +13,7 @@ export class Product {
     price: number;
 
     @Column()
-    category: string;
+    category_id: number;
 
     @DeleteDateColumn()
     deletedt: Date;
